@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color:  white;
+}
+
+
+table {
+  border: 1px solid black;
+  border-radius : 4px;
+  width: 100%;
+}
+th {
+  font-weight: bold;
+  padding: 10px;
+}
+td {
+  padding: 10px;
+}
+td:hover {
+  background-color: lightgray;
+}
+td.positive {
+  color: green;
+}
+td.negative {
+  color: red;
+}
+
+select {
+   /* Remove the outline */
+   /* Remove the default arrow icon in Firefox */
+  /* Remove the default arrow icon in other browsers */
+   /* Set the background color as transparent */
+  color: inherit; /* Inherit the color from parent */
+  outline:  none;
+  /* Adjust the padding as needed */
+  font-size: inherit; /* Inherit the font size from parent */
+}
+
+
+
+
+#main-container {
+  width: 100%;
+}
+
+.container {
+  background-color: white;
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 75%;
+  gap : 50px;
+}
+
+.recharts-tooltip-item-list .recharts-tooltip-item .recharts-tooltip-item-name {
+  display: inline;
+}
+
+.search-inputs {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    margin-top: 50px;
+    width: 90%;
+  
+  }
+  .search-inputs {
+    margin-top: 30px;
+    flex-direction: column;
+    justify-items: left;
+    align-items: left;
+    align-content: flex-start;
+    gap: 20px;
+  }
+  
+}
+
+
+
+.company-info {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+}
+
+.company-logo {
+  width: 160px;
+  height: 160px;
+  background-color: #e8eded;
+  padding: 10px;
+}
+
+.company-symbol {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+.company-details {
+  width: fit-content;
+   color: black;
+}
+
+
+
+.company-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.industry {
+  font-size: 18px;
+  margin: 10px 0 0 0;
+}
+
+.volume,
+.market-cap {
+  font-size: 16px;
+  margin: 10px 0 0 0;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding-right: 40px;
+}
+
+.price,
+.change {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.chart-container {
+  width: 80%;
+  margin: auto;
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.chart-container .recharts-responsive-container {
+  width: 100%;
+}
+
+.recharts-tooltip {
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  color: black;
+  white-space: nowrap;
+}
+
+.recharts-tooltip-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.recharts-tooltip-item {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.recharts-tooltip-item-name {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.recharts-tooltip-item-value {
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-container {
+    align-items: center;
+  }
+}
+
+
